@@ -21,6 +21,7 @@ define view entity ZLBC_books_C404
       Books.editorial as Editorial,
       Books.idioma    as Idioma,
       Books.paginas   as Paginas,
+      @Semantics.amount.currencyCode: 'Moneda'
       Books.precio    as Precio,
       Books.moneda    as Moneda,
       case      
@@ -34,7 +35,7 @@ define view entity ZLBC_books_C404
       Category.descripcion as Description,
       
       Books.formato   as Formato,
-      Books.url       as Url,
+      Books.imagen       as Imagen,
 
       _Client
 }

@@ -16,6 +16,6 @@ define view entity ZLBC_client_C404
   key Clients.tipo_acceso as AccessType,
       Clients.nombre      as Name,
       Clients.apellido    as Surname,
-      Clients.emeail      as Email,
-      Clients.url         as images
+      Clients.email      as Email,
+      Clients.imagen         as images
 }
