@@ -9,7 +9,11 @@ CLASS zlbcl_insert_tabcustomer DEFINITION
   PRIVATE SECTION.
 ENDCLASS.
 
-CLASS zlbcl_insert_tabcustomer IMPLEMENTATION.
+
+
+CLASS ZLBCL_INSERT_TABCUSTOMER IMPLEMENTATION.
+
+
   METHOD if_oo_adt_classrun~main.
 
     data: lt_acc_categ type table of ZLBTAC_CATG_C404,
@@ -206,5 +210,4 @@ SELECT * FROM ZLBTAC_CATG_C404 INTO TABLE @data(lt).
     out->write( 'DONE!' ).
 
   ENDMETHOD.
-
 ENDCLASS.
