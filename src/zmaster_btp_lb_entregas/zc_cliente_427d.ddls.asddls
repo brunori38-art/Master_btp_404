@@ -1,5 +1,5 @@
 @AbapCatalog.viewEnhancementCategory: [#NONE]
-@AccessControl.authorizationCheck: #NOT_REQUIRED
+@AccessControl.authorizationCheck: #NOT_ALLOWED
 @EndUserText.label: 'Client'
 @Metadata.ignorePropagatedAnnotations: true
 

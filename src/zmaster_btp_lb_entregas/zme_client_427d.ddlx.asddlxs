@@ -1,9 +1,9 @@
 @Metadata.layer: #CORE
-@UI.headerInfo: {
-    typeName: 'Cliente',
-    typeNamePlural: 'Libros',
-    imageUrl: 'Images',
-    title: {
+    @UI.headerInfo: {
+        typeName: 'Cliente',
+        typeNamePlural: 'Libros',
+        imageUrl: 'Images',
+        title: {
         type: #STANDARD,
         value: 'Name'
     },

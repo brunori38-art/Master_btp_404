@@ -56,7 +56,7 @@ annotate entity ZC_books_427d
   @UI: { lineItem: [{ position: 20,
                       importance: #HIGH }]}
   Autor;
-  @Consumption.valueHelpDefinition: [{ entity:{ name: 'zlbc_categ_c404',
+  @Consumption.valueHelpDefinition: [{ entity:{ name: 'zc_cate_427d',
                                                 element: 'Description'} }]
   @UI: { fieldGroup: [{ qualifier: 'DetallesLibro',
                         position: 20}],
@@ -83,12 +83,11 @@ annotate entity ZC_books_427d
   @UI: { fieldGroup: [{ qualifier: 'DetallesLibro',
                         position: 30}]}
   Description;
-
+  
   @UI: { lineItem: [{ position: 80,
                       importance: #HIGH,
                       criticality: 'Sales' }]}
   /* Associations */
   _Client;
-
     
 }

@@ -1,7 +1,7 @@
 @AbapCatalog.viewEnhancementCategory: [#NONE]
-@AccessControl.authorizationCheck: #NOT_REQUIRED
+@AccessControl.authorizationCheck: #NOT_ALLOWED
 @EndUserText.label: 'Books'
-@Metadata.ignorePropagatedAnnotations: true
+@Metadata.ignorePropagatedAnnotations: false
 
 @Metadata.allowExtensions: true
 
@@ -12,7 +12,7 @@ define view entity ZC_books_427d
 
     left outer join ZC_clientebook_427d as Sales    on Sales.BookId = Books.id_libro
 
-  association [0..*] to ZLBC_client_C404 as _Client on $projection.Idlibro = _Client.IdBook
+  association [0..*] to ZC_cliente_427d as _Client on $projection.Idlibro = _Client.IdBook
 
 {
   key Books.id_libro  as Idlibro,
