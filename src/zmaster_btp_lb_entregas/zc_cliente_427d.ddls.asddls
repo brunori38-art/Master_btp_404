@@ -1,14 +1,14 @@
 @AbapCatalog.viewEnhancementCategory: [#NONE]
-@AccessControl.authorizationCheck: #NOT_ALLOWED
+@AccessControl.authorizationCheck: #NOT_REQUIRED
 @EndUserText.label: 'Client'
 @Metadata.ignorePropagatedAnnotations: true
 
 @Metadata.allowExtensions: true
 
-define view entity ZLBC_client_C404
-  as select from zlbt_client_c404 as Clients
+define view entity ZC_cliente_427d   
+  as select from ztb_cliente_427d as Clients
 
-    inner join   zlbt_clnlib_c404 as relclnlib on relclnlib.id_cliente = Clients.id_cliente
+    inner join   ztb_libcli_427d as relclnlib on relclnlib.id_cliente = Clients.id_cliente
 
 {
   key Clients.id_cliente  as IdClient,

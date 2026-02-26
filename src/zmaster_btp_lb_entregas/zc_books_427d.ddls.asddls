@@ -1,15 +1,16 @@
 @AbapCatalog.viewEnhancementCategory: [#NONE]
-@AccessControl.authorizationCheck: #NOT_ALLOWED
+@AccessControl.authorizationCheck: #NOT_REQUIRED
 @EndUserText.label: 'Books'
-@Metadata.ignorePropagatedAnnotations: false
+@Metadata.ignorePropagatedAnnotations: true
+
 @Metadata.allowExtensions: true
 
-define view entity ZLBC_books_C404
-  as select from    zlbt_libros_c404 as Books
+define view entity ZC_books_427d
+  as select from ztb_libros_427d as Books
+  
+  inner join      ztb_catego_427d as Category on Category.bi_categ = Books.bi_categ
 
-    inner join      zlbt_catego_c404 as Category on Category.bi_categ = Books.bi_categ
-
-    left outer join zlbc_clnt_book_c404 as Sales    on Sales.BookId = Books.id_libro
+    left outer join ZC_clientebook_427d as Sales    on Sales.BookId = Books.id_libro
 
   association [0..*] to ZLBC_client_C404 as _Client on $projection.Idlibro = _Client.IdBook
 
@@ -38,4 +39,5 @@ define view entity ZLBC_books_C404
       Books.imagen       as Imagen,
 
       _Client
-}
+
+  }

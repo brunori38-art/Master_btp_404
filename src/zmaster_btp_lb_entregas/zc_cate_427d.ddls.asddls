@@ -1,9 +1,9 @@
 @AbapCatalog.viewEnhancementCategory: [#NONE]
-@AccessControl.authorizationCheck: #NOT_ALLOWED
+@AccessControl.authorizationCheck: #NOT_REQUIRED
 @EndUserText.label: 'Category'
 @Metadata.ignorePropagatedAnnotations: true
-define view entity ZLBC_CATEG_C404
-  as select from zlbt_catego_c404
+define view entity ZC_cate_427d 
+  as select from ztb_catego_427d
 {
   key bi_categ    as Category,
       descripcion as Description
